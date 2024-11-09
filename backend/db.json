@@ -1,0 +1,24 @@
+{
+  "clientes": [
+    {
+      "id": "1",
+      "name": "pedro"
+    }
+  ],
+  "Pedidos": [
+    {
+      "id": "d013",
+      "nome": "teste",
+      "endereco": "teste",
+      "produto": "teste"
+    }
+  ],
+  "produtos": [
+    {
+      "id": "cfcd",
+      "nome": "x-Bacon",
+      "preco": 22.55,
+      "descricao": "bacon"
+    }
+  ]
+}
