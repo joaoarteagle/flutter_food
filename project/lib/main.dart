@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_food/MyApp.dart';
+import 'package:project/MyApp.dart';
 
 void main() {
   runApp(MyApp());
