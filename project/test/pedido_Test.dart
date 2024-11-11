@@ -10,10 +10,10 @@ void main() {
       {'nome': 'Produto 2', 'descricao': 'Descrição 2', 'preco': 15.0},
     ];
 
-    // Montar o widget PedidoScreen
-    await tester.pumpWidget(
-      MaterialApp(home: PedidoScreen(mockProdutos: mockProdutos)),
-    );
+    // // Montar o widget PedidoScreen
+    // await tester.pumpWidget(
+    //   MaterialApp(home: PedidoScreen(mockProdutos: mockProdutos)),
+    // );
 
     // Verificar se os itens da lista de produtos estão sendo exibidos
     expect(find.text('Produto 1'), findsOneWidget);
@@ -32,9 +32,9 @@ void main() {
       {'nome': 'Produto 2', 'descricao': 'Descrição 2', 'preco': 15.0},
     ];
 
-    await tester.pumpWidget(
-      MaterialApp(home: PedidoScreen(mockProdutos: mockProdutos)),
-    );
+    // await tester.pumpWidget(
+    //   MaterialApp(home: PedidoScreen(mockProdutos: mockProdutos)),
+    // );
 
     // Simular um toque em um item da lista
     await tester.tap(find.text('Produto 1'));

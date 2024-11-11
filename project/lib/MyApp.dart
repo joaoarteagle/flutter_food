@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/screens/login.dart';
 import 'screens/admin.dart';
 import 'screens/addProdutosCliente.dart';
 
@@ -19,7 +20,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Delivery App'),
       ),
-      backgroundColor: Color.fromRGBO(50, 85, 0, 1.0),
+      backgroundColor: Color.fromRGBO(236, 255, 129, 1),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -30,8 +31,7 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => addProdutosCliente()),
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
                   );
                 },
                 child:

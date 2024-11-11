@@ -36,6 +36,7 @@ class _CreateProdutoState extends State<CreateProduto> {
         _nomeController.clear();
         _precoController.clear();
         _descricaoController.clear();
+        Navigator.pop(context);
       } else {
         // Erro ao adicionar o produto
         ScaffoldMessenger.of(context).showSnackBar(

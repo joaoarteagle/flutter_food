@@ -1,8 +1,10 @@
 {
-  "clientes": [
+  "users": [
     {
       "id": "1",
-      "name": "pedro"
+      "username": "joaopaulo",
+      "endereco": "teste",
+      "password": "12345"
     }
   ],
   "Pedidos": [
@@ -11,6 +13,12 @@
       "nome": "teste",
       "endereco": "teste",
       "produto": "teste"
+    },
+    {
+      "id": "a579",
+      "nome": "joao paulo",
+      "endereco": "rua tal",
+      "produto": "exemplo"
     }
   ],
   "produtos": [
@@ -19,6 +27,24 @@
       "nome": "x-Bacon",
       "preco": 22.55,
       "descricao": "bacon"
+    },
+    {
+      "id": "cd54",
+      "nome": "x-tudo",
+      "preco": 25.55,
+      "descricao": "PAO"
+    },
+    {
+      "id": "7193",
+      "nome": "salada",
+      "preco": 10.55,
+      "descricao": "cscdsd"
+    },
+    {
+      "id": "a2e5",
+      "nome": "refrigerante",
+      "preco": 5.5,
+      "descricao": "coca-cola"
     }
   ]
 }

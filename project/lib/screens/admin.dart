@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:project/screens/addProdutos.dart';
 import 'package:http/http.dart' as http;
+import 'package:project/screens/login.dart';
 import 'dart:convert';
+
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AdminScreen extends StatefulWidget {
   @override
@@ -23,6 +26,11 @@ class _AdminScreenState extends State<AdminScreen> {
     }
   }
 
+  Future<void> pedidoFeito(int id) async {
+    final response =
+        await http.delete(Uri.parse('http://localhost:3000/Pedidos/$id'));
+  }
+
   @override
   void initState() {
     super.initState();
@@ -34,7 +42,25 @@ class _AdminScreenState extends State<AdminScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Admin - Pedidos'),
+        backgroundColor: Colors.orangeAccent,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.account_circle), // Ícone de alterar login
+            onPressed: () async {
+              // Apaga o estado de login do SharedPreferences
+              SharedPreferences prefs = await SharedPreferences.getInstance();
+              prefs.setBool('isLoggedIn', false);
+
+              // Navega para a tela de login
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => LoginScreen()),
+              );
+            },
+          ),
+        ],
       ),
+      backgroundColor: Color.fromRGBO(255, 156, 129, 1),
       body: ListView.builder(
         itemCount: _pedidos.length,
         itemBuilder: (context, index) {
